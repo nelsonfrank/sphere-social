@@ -1205,6 +1205,11 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/inter/-/inter-0.2.3.tgz#82bf7224bb76fc6614a00393a9e9ee4d6dd09dcb"
   integrity sha512-iHK9FI+dnE45X5c2Z5hSFwNH4zUWethizpbv3XUn0FIGw5jwvzriENz0a6wCdkI4/d+1QkurnHo5XHti7TbNJA==
 
+"@expo-google-fonts/pacifico@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/pacifico/-/pacifico-0.2.3.tgz#97878b24222f578205f6c0356594afec345aad7c"
+  integrity sha512-H438XMx00IbWT6rY5RnB5QeVc6y8MvPFEhx2+A1eNQ2OP7f7SIgl6z4C2pocpX54p0SnKUexSUFwftOsEHoJUg==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
@@ -3424,6 +3429,13 @@ expo-font@~11.10.2:
   integrity sha512-AE0Q0LiWiVosQ/jlKUPoWoob7p3GwYM2xmLoUkuopO9RYh9NL1hZKHiMKcWBZyDG8Gww1GtBQwh7ZREST8+jjQ==
   dependencies:
     fontfaceobserver "^2.1.0"
+
+expo-image@~1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-1.10.5.tgz#3ed592ab1e30a3f2df94eafc47f66d4c3b18d577"
+  integrity sha512-IiqSU9FxpoNeSFbtVLHdLq9MIHtAUYI1hcNGXoj3fpNpPEUdjN41mPftLQPIszfWWBxgrjUu4trIVXuf/Ijy+w==
+  dependencies:
+    "@react-native/assets-registry" "~0.73.1"
 
 expo-keep-awake@~12.8.2:
   version "12.8.2"
