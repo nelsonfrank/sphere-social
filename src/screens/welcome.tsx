@@ -16,7 +16,8 @@ import * as SplashScreen from "expo-splash-screen";
 import { Image } from "expo-image";
 
 SplashScreen.preventAutoHideAsync();
-export default function WelcomeScreen() {
+
+export default function WelcomeScreen({ navigation }: any) {
   const blurhash =
     "|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
 
@@ -26,7 +27,7 @@ export default function WelcomeScreen() {
     Inter_500: Inter_500Medium,
     Inter_600: Inter_600SemiBold,
     Inter_700: Inter_700Bold,
-    Pacifico_400: Pacifico_400Regular
+    Pacifico_400: Pacifico_400Regular,
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -39,6 +40,9 @@ export default function WelcomeScreen() {
     return null;
   }
 
+  const handleStart = () => {
+    navigation.navigate("Categories");
+  };
   return (
     <View className="flex-1 flex-col py-2" onLayout={onLayoutRootView}>
       <View style={{ flex: 1 }} className="flex flex-col justify-end py-4">
@@ -54,25 +58,26 @@ export default function WelcomeScreen() {
           style={{
             flex: 1,
             width: "100%",
-            
           }}
           source={require("../../assets/images/welcome.png")}
-          placeholder={blurhash}
           contentFit="contain"
           transition={1000}
         />
       </View>
-      <View style={{ flex: 4 }} className="flex justify-center">
-        <View style={{ flex: 2 }} className=" flex justify-center">
+      <View style={{ flex: 4 }} className="flex justify-center mx-2">
+        <View style={{ flex: 3 }} className=" flex justify-center">
           <Text
             style={{ fontFamily: "Inter_600" }}
-            className="text-5xl font-semibold text-center  mx-1"
+            className="text-5xl text-gray-900 font-semibold text-center tracking-widest mx-1"
           >
             Explore the best content by unique people
           </Text>
         </View>
         <View style={{ flex: 2 }} className="flex items-center mt-8">
-          <TouchableOpacity className="border-border border-r-black border-4 p-2 rounded-full w-28 h-28">
+          <TouchableOpacity
+            className="border-border border-4 p-2 rounded-full w-28 h-28"
+            onPress={handleStart}
+          >
             <View className=" bg-black text-white rounded-full p-6">
               <Ionicons
                 name="chevron-forward-outline"
